@@ -46,37 +46,17 @@ if (isset($_POST['kuld'])) {
         echo '</ul>';
     }
 ?>
-    <form action="" method="post"
-                enctype="multipart/form-data">
-        <label>Első:
-            <input type="file" name="elso" required>
-        </label>
-        <label>Második:
-            <input type="file" name="masodik">
-        </label>
-        <label>Harmadik:
-            <input type="file" name="harmadik">
-        </label>        
-        <input type="submit" name="kuld">
-      </form> 
 
-
-<div id="galeria">
-    <h1>Galéria</h1>
     <?php
     arsort($kepek);
     foreach($kepek as $fajl => $datum)
     {
     ?>
-        <div class="kep">
-            <a href="<?php echo $MAPPA.$fajl ?>">
-                <img src="<?php echo $MAPPA.$fajl ?>">
-            </a>            
-            <p>Név:  <?php echo $fajl; ?></p>
-            <p>Dátum:  <?php echo date($DATUMFORMA, $datum); ?></p>
+
         </div>
     <?php
     }
     ?>
+
 </div>
 
